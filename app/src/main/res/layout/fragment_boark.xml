@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="12dp"
-    tools:context=".ui.fragment.BoarkFragment">
+    tools:context=".ui.fragment.board.BoarkFragment">
 
     <TextView
         android:id="@+id/tv_tittle"

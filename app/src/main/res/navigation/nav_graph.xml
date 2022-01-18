@@ -7,12 +7,22 @@
 
     <fragment
         android:id="@+id/mainBoardFragment"
-        android:name="com.example.homewwork2android2.ui.fragment.MainBoardFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.board.MainBoardFragment"
         android:label="fragment_main_board"
         tools:layout="@layout/fragment_main_board" />
     <fragment
         android:id="@+id/boarkFragment"
-        android:name="com.example.homewwork2android2.ui.fragment.BoarkFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.board.BoarkFragment"
         android:label="fragment_boark"
         tools:layout="@layout/fragment_boark" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.createtask.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.createtask.CreateTaskFragment"
+        android:label="fragment_create_task"
+        tools:layout="@layout/fragment_create_task" />
 </navigation>

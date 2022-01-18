@@ -1,14 +1,12 @@
-package com.example.homewwork2android2.ui.fragment;
+package com.example.homewwork2android2.ui.fragment.board;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homewwork2android2.databinding.FragmentBoarkBinding;
-import com.example.homewwork2android2.databinding.FragmentMainBoardBinding;
 import com.example.homewwork2android2.model.ViewPagerModel;
 
 import java.util.ArrayList;

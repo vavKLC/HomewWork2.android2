@@ -1,4 +1,4 @@
-package com.example.homewwork2android2.ui.fragment;
+package com.example.homewwork2android2.ui.fragment.board;
 
 import android.os.Bundle;
 
@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import com.example.homewwork2android2.R;
 import com.example.homewwork2android2.databinding.FragmentMainBoardBinding;
 import com.example.homewwork2android2.model.ViewPagerModel;
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import java.util.ArrayList;
 
