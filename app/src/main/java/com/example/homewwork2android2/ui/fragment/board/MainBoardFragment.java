@@ -33,7 +33,7 @@ public class MainBoardFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         list.add(new ViewPagerModel("Куджо Джотаро" , "Джотаро — правонарушитель, который живет обычной жизнью." , R.drawable.jotaro));
-        list.add(new ViewPagerModel("Рандомный негр" , "Он просто негр , обычный негр" , R.drawable.negr));
+        list.add(new ViewPagerModel("Антон" , "Самый обычный человек,не называйте его черным" , R.drawable.negr));
         list.add(new ViewPagerModel("Меня зовут Кира Йошикаге" , " Мне 33 года." , R.drawable.kira));
         adapter = new ViewPagerAdapter(list);
         binding.viewPager.setAdapter(adapter);
