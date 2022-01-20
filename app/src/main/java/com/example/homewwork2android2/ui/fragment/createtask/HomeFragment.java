@@ -17,8 +17,8 @@ import com.example.homewwork2android2.ui.fragment.createtask.adapter.HomeAdapter
 
 public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
-    String text;
-    String number;
+//    String text;
+//    String number;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,35 +30,34 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getData();
-        initAdapter();
+//        getData();
+//        initAdapter();
         initClickers();
     }
 
 
-    private String getData() {
-        if (getArguments() != null) {
-            text = getArguments().getString("key");
-            number = getArguments().getString("A");
-            return text;
-    }
-        return "";
-
-    }
-
-    private void initAdapter() {
-        HomeAdapter homeAdapter = new HomeAdapter();
-        binding.recyclerView.setAdapter(homeAdapter);
-        if (!getData().isEmpty()) {
-            homeAdapter.addText(text);
-            homeAdapter.addText(number);
-        }
-    }
+//    private String getData() {
+//        if (getArguments() != null) {
+//            text = getArguments().getString("key");
+//            return text;
+//    }
+//        return "";
+//
+//    }
+//
+//    private void initAdapter() {
+//        HomeAdapter homeAdapter = new HomeAdapter();
+//        binding.recyclerView.setAdapter(homeAdapter);
+//        if (!getData().isEmpty()) {
+//            homeAdapter.addText(text);
+//        }
+//    }
     private void initClickers() {
-        binding.btnOpenCreate.setOnClickListener(new View.OnClickListener() {
+        binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(requireView()).navigate(R.id.createTaskFragment);
+                CreateTaskFragment createTaskFragment = new  CreateTaskFragment();
+                createTaskFragment.show(requireActivity().getSupportFragmentManager(),"");
             }
         });
     }

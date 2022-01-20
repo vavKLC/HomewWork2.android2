@@ -1,6 +1,7 @@
 package com.example.homewwork2android2.ui.fragment.board;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -8,15 +9,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homewwork2android2.databinding.FragmentBoarkBinding;
 import com.example.homewwork2android2.model.ViewPagerModel;
+import com.example.homewwork2android2.ui.fragment.board.interfaces.OnItemClickListener;
 
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder> {
     ArrayList<ViewPagerModel> listPager = new ArrayList<>();
+    OnItemClickListener listener;
 
-    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager) {
+    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnItemClickListener listener) {
         this.listPager = listPager;
+        this.listener = listener;
     }
+
 
     @NonNull
     @Override
@@ -45,6 +50,12 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
             binding.tvTittle.setText(model.getTitle());
             binding.descriptionTv.setText(model.getDescription());
             binding.imageView.setImageResource(model.getImage());
+            binding.btnSkip.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.itemClick();
+                }
+            });
         }
     }
 }

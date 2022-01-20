@@ -2,4 +2,5 @@
     <string name="app_name">HomewWork2.android2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fab">FAB</string>
 </resources>
