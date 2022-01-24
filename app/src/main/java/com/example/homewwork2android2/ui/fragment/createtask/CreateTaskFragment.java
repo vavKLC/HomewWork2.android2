@@ -6,9 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,8 +14,10 @@ import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
 
+import com.example.homewwork2android2.app.App;
 import com.example.homewwork2android2.R;
 import com.example.homewwork2android2.databinding.FragmentCreateTaskBinding;
+import com.example.homewwork2android2.model.TaskModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.Calendar;
@@ -29,6 +28,8 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
     private int startYear;
     private int startMonth;
     private int startDay;
+    private String date;
+    private String repaet;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +48,8 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         binding.btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendText();
+                writeToDataBase();
+                dismiss();
             }
         });
         binding.tvChooseDate.setOnClickListener(new View.OnClickListener() {
@@ -65,12 +67,13 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
     }
 
 
-    private void sendText() {
+
+    private void writeToDataBase() {
         String text = binding.etTask.getText().toString();
-        Bundle bundle = new Bundle();
-        bundle.putString("key", text);
-        Navigation.findNavController(requireView()).navigate(R.id.homeFragment, bundle);
+        TaskModel taskModel = new  TaskModel(text , date , repaet);
+        App.getApp().getDb().taskDao().insert(taskModel);
     }
+
 
     private void showDatePickerDialog() {
         Calendar calendar = Calendar.getInstance();
@@ -83,9 +86,9 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
 
     }
 
-    private void showRepeatDialog(){
+    private void showRepeatDialog() {
         LayoutInflater inflater = LayoutInflater.from(requireContext());
-        View view = inflater.inflate(R.layout.repeat_dialog , null);
+        View view = inflater.inflate(R.layout.repeat_dialog, null);
         Dialog alertDialog = new Dialog(requireContext());
         alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         alertDialog.setContentView(view);
@@ -98,35 +101,45 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         never.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvChooseReapeat.setText("Never");
+                String never = "Never";
+                binding.tvChooseReapeat.setText(never);
+                repaet = never;
                 alertDialog.dismiss();
             }
         });
         day.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvChooseReapeat.setText("Every day");
+                String day = "Every day";
+                binding.tvChooseReapeat.setText(day);
+                repaet = day;
                 alertDialog.dismiss();
             }
         });
         week.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvChooseReapeat.setText("Every week");
+                String week = "Every week";
+                binding.tvChooseReapeat.setText(week);
+                repaet = week;
                 alertDialog.dismiss();
             }
         });
         month.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvChooseReapeat.setText("Every month");
+                String month = "Every month";
+                binding.tvChooseReapeat.setText(month);
+                repaet = month;
                 alertDialog.dismiss();
             }
         });
         year.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvChooseReapeat.setText("Every year");
+                String year = "Every year";
+                binding.tvChooseReapeat.setText(year);
+                repaet = year;
                 alertDialog.dismiss();
             }
         });
@@ -135,6 +148,7 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        binding.tvChooseDate.setText("" + day + "." + month + 1  + "." + year);
+        date = "" + day + "." + month + 1 + "." + year;
+        binding.tvChooseDate.setText(date);
     }
 }

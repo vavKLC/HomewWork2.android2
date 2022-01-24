@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homewwork2android2.databinding.FragmentBoarkBinding;
 import com.example.homewwork2android2.model.ViewPagerModel;
-import com.example.homewwork2android2.ui.fragment.board.interfaces.OnItemClickListener;
+import com.example.homewwork2android2.interfaces.OnViewPagerItemClickListener;
 
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder> {
     ArrayList<ViewPagerModel> listPager = new ArrayList<>();
-    OnItemClickListener listener;
+    OnViewPagerItemClickListener listener;
 
-    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnItemClickListener listener) {
+    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnViewPagerItemClickListener listener) {
         this.listPager = listPager;
         this.listener = listener;
     }

@@ -16,13 +16,12 @@ import android.view.ViewGroup;
 import com.example.homewwork2android2.R;
 import com.example.homewwork2android2.databinding.FragmentMainBoardBinding;
 import com.example.homewwork2android2.model.ViewPagerModel;
-import com.example.homewwork2android2.ui.fragment.board.interfaces.OnItemClickListener;
+import com.example.homewwork2android2.interfaces.OnViewPagerItemClickListener;
 
-import java.sql.Struct;
 import java.util.ArrayList;
 
 
-public class MainBoardFragment extends Fragment implements OnItemClickListener {
+public class MainBoardFragment extends Fragment implements OnViewPagerItemClickListener {
     private FragmentMainBoardBinding binding;
     ViewPagerAdapter adapter;
     ArrayList<ViewPagerModel> list = new ArrayList<>();
