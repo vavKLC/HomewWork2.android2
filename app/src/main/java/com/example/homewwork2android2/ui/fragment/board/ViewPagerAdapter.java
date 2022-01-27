@@ -1,7 +1,6 @@
 package com.example.homewwork2android2.ui.fragment.board;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -14,7 +13,7 @@ import com.example.homewwork2android2.interfaces.OnViewPagerItemClickListener;
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder> {
-    ArrayList<ViewPagerModel> listPager = new ArrayList<>();
+    ArrayList<ViewPagerModel> listPager;
     OnViewPagerItemClickListener listener;
 
     public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnViewPagerItemClickListener listener) {
@@ -40,7 +39,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
     }
 
     public class ViewPagerHolder extends RecyclerView.ViewHolder {
-        private FragmentBoarkBinding binding;
+        private final FragmentBoarkBinding binding;
 
         public ViewPagerHolder(FragmentBoarkBinding binding) {
             super(binding.getRoot());
@@ -49,13 +48,8 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
         public void onBind(ViewPagerModel model){
             binding.tvTittle.setText(model.getTitle());
             binding.descriptionTv.setText(model.getDescription());
-            binding.imageView.setImageResource(model.getImage());
-            binding.btnSkip.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    listener.itemClick();
-                }
-            });
+            binding.lottieAnim.setAnimation(model.getImage());
+            binding.btnSkip.setOnClickListener(view -> listener.itemClick());
         }
     }
 }

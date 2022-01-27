@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
+    android:padding="@dimen/large_padding"
     tools:context=".ui.fragment.createtask.CreateTaskFragment">
 
     <EditText
@@ -13,18 +13,18 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_background"
         android:gravity="center"
-        android:hint="text"
-        android:padding="5dp"
+        android:hint="@string/text"
+        android:padding="@dimen/small"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="@dimen/large"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_due_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Due date"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/due_date"
         android:textColor="@color/grey"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tv_choose_date"
@@ -34,22 +34,22 @@
         android:id="@+id/tv_choose_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/normal_margin"
         android:background="@drawable/rectangle_background"
         android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
         android:drawablePadding="8dp"
-        android:padding="8dp"
-        android:text="20.01.22"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/_20_01_22"
         android:textColor="@color/grey"
-        android:textSize="18sp"
+        android:textSize="@dimen/normal"
         app:layout_constraintTop_toBottomOf="@id/tv_due_date" />
 
     <TextView
         android:id="@+id/Reapeat_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Reapeat"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/reapeat"
         android:textColor="@color/grey"
         android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
@@ -59,14 +59,14 @@
         android:id="@+id/tv_choose_reapeat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/normal_margin"
         android:background="@drawable/rectangle_background"
         android:drawableEnd="@drawable/ic_arrow_down_24"
         android:drawablePadding="6dp"
-        android:padding="8dp"
-        android:text="Every week"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/every_week"
         android:textColor="@color/grey"
-        android:textSize="18sp"
+        android:textSize="@dimen/normal"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Reapeat_tv" />
 
@@ -75,20 +75,20 @@
         android:id="@+id/btn_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/biggest_margin"
         android:background="@drawable/rectangle_background_button"
-        android:text="Add new task"
+        android:text="@string/add_new_task"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="@dimen/normal"
         app:layout_constraintTop_toBottomOf="@id/tv_choose_date" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/normal_margin"
         android:gravity="center"
-        android:text="Back to list"
+        android:text="@string/back_to_list"
         android:textColor="@color/grey"
         app:layout_constraintTop_toBottomOf="@id/btn_home" />
 

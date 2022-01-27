@@ -37,18 +37,18 @@ public class MainBoardFragment extends Fragment implements OnViewPagerItemClickL
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         checkOnShow();
-        list.add(new ViewPagerModel("Куджо Джотаро" , "Джотаро — правонарушитель, который живет обычной жизнью." , R.drawable.jotaro));
-        list.add(new ViewPagerModel("Антон" , "Самый обычный человек,не называйте его черным" , R.drawable.negr));
-        list.add(new ViewPagerModel("Меня зовут Кира Йошикаге" , " Мне 33 года." , R.drawable.kira));
-        adapter = new ViewPagerAdapter(list , this);
+        list.add(new ViewPagerModel("LifeTrack", "Welcome aboard", R.raw.todo_ani));
+        list.add(new ViewPagerModel("LifeTrack", "Welcome aboard", R.raw.todo_ani2));
+        list.add(new ViewPagerModel("LifeTrack", "Welcome aboard", R.raw.todo_ani3));
+        adapter = new ViewPagerAdapter(list, this);
         binding.viewPager.setAdapter(adapter);
         binding.dotsIndicator.setViewPager2(binding.viewPager);
     }
 
-    private void checkOnShow(){
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared_prefs" , Context.MODE_PRIVATE);
-        boolean isShow = sharedPreferences.getBoolean("isShow" , false);
-        if (isShow){
+    private void checkOnShow() {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+        boolean isShow = sharedPreferences.getBoolean("isShow", false);
+        if (isShow) {
             Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
         }
     }
@@ -56,7 +56,7 @@ public class MainBoardFragment extends Fragment implements OnViewPagerItemClickL
     @Override
     public void itemClick() {
         Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared_prefs" , Context.MODE_PRIVATE);
-        sharedPreferences.edit().putBoolean("isShow" , true).apply();
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+        sharedPreferences.edit().putBoolean("isShow", true).apply();
     }
 }

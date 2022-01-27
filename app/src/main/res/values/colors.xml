@@ -11,4 +11,14 @@
     <color name="orange">#FF5722</color>
     <color name="green">#45AE49</color>
     <color name="red">#FF0000</color>
+    <color name="white_red">#EF3854</color>
+    <color name="blue_black">#3737D2</color>
+    <color name="Ultra_Violet">#6B5B95</color>
+    <color name="Meadowlark">#ECDB54</color>
+    <color name="Arcadia">#00A591</color>
+    <color name="Lime_Punch">#BFD641</color>
+    <color name="Coconut_Milk">#F0EDE5</color>
+    <color name="ShadedSpruce">#005960</color>
+    <color name="Autumn_Maple">#D2691E</color>
+    <color name="Marina">#4F84C4</color>
 </resources>

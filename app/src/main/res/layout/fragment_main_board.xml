@@ -18,15 +18,15 @@
         android:id="@+id/dots_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:dotsColor="@color/black"
-        app:dotsCornerRadius="8dp"
-        app:dotsSize="16dp"
+        app:dotsColor="@color/white_red"
+        app:dotsCornerRadius="@dimen/normal_dotsRadius"
+        app:dotsSize="@dimen/normal_dotsSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"
-        app:dotsSpacing="4dp"
-        app:dotsStrokeWidth="2dp"
+        android:layout_marginBottom="@dimen/above_normal_margin"
+        app:dotsSpacing="@dimen/normal_dotsSpacing"
+        app:dotsStrokeWidth="@dimen/normal_dotsStrokeWidth"
         app:selectedDotColor="@color/black" />
 
 

@@ -3,4 +3,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fab">FAB</string>
+    <string name="skip">Skip</string>
+    <string name="collaboration_with_students">Collaboration with students</string>
+    <string name="you_have_already_account">You have already account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="todo">TODO</string>
+    <string name="Never">Never</string>
+    <string name="every_day">Every day</string>
+    <string name="every_week">Every week</string>
+    <string name="every_month">Every month</string>
+    <string name="every_year">Every year</string>
+    <string name="due_date">Due date</string>
+    <string name="reapeat">Reapeat</string>
+    <string name="_20_01_22">20.01.22</string>
+    <string name="text">text</string>
+    <string name="add_new_task">Add new task</string>
+    <string name="back_to_list">Back to list</string>
 </resources>

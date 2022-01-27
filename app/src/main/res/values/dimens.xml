@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal">18sp</dimen>
+    <dimen name="large">20sp</dimen>
+    <dimen name="small">5dp</dimen>
+    <dimen name="normal_margin">12dp</dimen>
+    <dimen name="normal_padding">8dp</dimen>
+    <dimen name="biggest_margin">50dp</dimen>
+    <dimen name="large_padding">12dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
+    <dimen name="avg_margin">30dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+    <dimen name="normal_elevation">8dp</dimen>
+    <dimen name="biggest_padding">16dp</dimen>
+    <dimen name="normal_dotsSize">16dp</dimen>
+    <dimen name="normal_dotsRadius">8dp</dimen>
+    <dimen name="normal_dotsSpacing">4dp</dimen>
+    <dimen name="normal_dotsStrokeWidth">2dp</dimen>
+    <dimen name="above_normal_margin">16dp</dimen>
+</resources>

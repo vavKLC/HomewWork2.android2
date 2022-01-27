@@ -2,64 +2,66 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/semi_rectangle_background">
 
     <View
         android:id="@+id/red_line"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@color/red"
+        android:background="@drawable/semi_rectangle_background_rep_dialog"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/semi_rectangle_background"
         app:layout_constraintTop_toBottomOf="@id/red_line">
 
         <RadioButton
             android:id="@+id/never_radioBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Never"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/Never"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/large" />
 
         <RadioButton
             android:id="@+id/day_radioBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Every day"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/every_day"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/large" />
 
         <RadioButton
             android:id="@+id/week_radioBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Every week"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/every_week"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/large" />
 
         <RadioButton
             android:id="@+id/month_radioBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Every month"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/every_month"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/large" />
 
         <RadioButton
             android:id="@+id/year_radioBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Every year"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/every_year"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/large" />
 
     </RadioGroup>
 

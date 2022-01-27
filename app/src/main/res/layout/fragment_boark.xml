@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp">
+    android:padding="@dimen/large_padding">
 
     <TextView
         android:id="@+id/tv_tittle"
@@ -14,59 +13,65 @@
         android:gravity="center"
         android:text="@string/hello_blank_fragment"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/large"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/description_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/normal_margin"
         android:gravity="center"
-        android:text="Collaboration with students "
-        android:textSize="18sp" />
+        android:text="@string/collaboration_with_students"
+        android:textSize="@dimen/normal" />
 
-    <ImageView
-        android:id="@+id/image_view"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_anim"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:lottie_fileName="todo_ani.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:contentDescription="@string/todo"
         android:src="@color/black" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_skip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/white"
-        android:elevation="10dp"
+        android:layout_marginTop="@dimen/large_margin"
+        android:backgroundTint="@color/white_red"
+        android:elevation="@dimen/normal_elevation"
         android:gravity="center"
-        android:text="Skip"
-        android:textSize="18sp"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/skip"
         android:textAllCaps="false"
-        android:padding="6dp"
-        android:textColor="#3737D2"
-        app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
-        app:iconGravity="textEnd"
-        app:iconTint="#3737D2" />
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal"
+        app:cornerRadius="11dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/avg_margin"
         android:gravity="center"
-        android:text="You have already account?" />
+        android:text="@string/you_have_already_account" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sign_in"
         android:layout_width="match_parent"
-        android:text="Sign in"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:backgroundTint="@color/white"
+        android:text="@string/sign_in"
+        android:gravity="center"
+        android:padding="@dimen/normal_padding"
         android:textAllCaps="false"
-        android:background="@color/white"
-        android:textSize="18sp"
-        android:textColor="#3737D2"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content" />
+        app:cornerRadius="11dp"
+        android:elevation="@dimen/normal_elevation"
+        android:textColor="@color/white_red"
+        android:textSize="@dimen/normal" />
 
 
 </LinearLayout>

@@ -18,7 +18,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/white_red"
         android:layout_gravity="end|bottom"
         android:contentDescription="@string/fab"
         app:srcCompat = "@drawable/ic_baseline_add_24" />
