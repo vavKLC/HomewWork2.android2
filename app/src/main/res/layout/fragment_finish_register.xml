@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_n_wave"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.auth.FinishRegisterFragment">
+
+    <TextView
+        style="@style/LifeTrack"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="@string/welcome_aboard"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_getstart"
+        style="@style/button_standart"
+        android:layout_marginTop="300dp"
+        android:text="@string/get_started" />
+
+</LinearLayout>

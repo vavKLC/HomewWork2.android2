@@ -3,18 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainBoardFragment">
+    app:startDestination="@+id/signUpFragment">
 
     <fragment
         android:id="@+id/mainBoardFragment"
         android:name="com.example.homewwork2android2.ui.fragment.board.MainBoardFragment"
         android:label="fragment_main_board"
         tools:layout="@layout/fragment_main_board" />
-    <fragment
-        android:id="@+id/boarkFragment"
-        android:name="com.example.homewwork2android2.ui.fragment.board.BoarkFragment"
-        android:label="fragment_boark"
-        tools:layout="@layout/fragment_boark" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.homewwork2android2.ui.fragment.createtask.HomeFragment"
@@ -25,4 +21,19 @@
         android:name="com.example.homewwork2android2.ui.fragment.createtask.CreateTaskFragment"
         android:label="fragment_create_task"
         tools:layout="@layout/fragment_create_task" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/finishRegisterFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.auth.FinishRegisterFragment"
+        android:label="fragment_finish_register"
+        tools:layout="@layout/fragment_finish_register" />
 </navigation>

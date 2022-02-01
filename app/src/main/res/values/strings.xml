@@ -19,4 +19,11 @@
     <string name="text">text</string>
     <string name="add_new_task">Add new task</string>
     <string name="back_to_list">Back to list</string>
+    <string name="lifetrack">Lifetrack</string>
+    <string name="your_number">Your number</string>
+    <string name="code">Code</string>
+    <string name="number">Number</string>
+    <string name="your_code">Your code</string>
+    <string name="welcome_aboard">Welcome aboard!</string>
+    <string name="get_started">Get started</string>
 </resources>
