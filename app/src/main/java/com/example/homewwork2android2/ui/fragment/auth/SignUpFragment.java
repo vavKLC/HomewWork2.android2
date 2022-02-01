@@ -37,4 +37,12 @@ public class SignUpFragment extends Fragment {
             }
         });
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (firebaseUser != null) {
+            Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
+        }
+    }
 }
