@@ -136,7 +136,6 @@ public class RegisterFragment extends Fragment {
         }
     }
 
-
     private void startPhoneNumberVerification(String phoneNumber) {
 
         PhoneAuthOptions options =

@@ -19,12 +19,15 @@ import com.example.homewwork2android2.R;
 import com.example.homewwork2android2.databinding.FragmentCreateTaskBinding;
 import com.example.homewwork2android2.model.TaskModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
 
 public class CreateTaskFragment extends BottomSheetDialogFragment implements DatePickerDialog.OnDateSetListener {
     private FragmentCreateTaskBinding binding;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private int startYear;
     private int startMonth;
     private int startDay;
@@ -72,6 +75,10 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         String text = binding.etTask.getText().toString();
         TaskModel taskModel = new  TaskModel(text , date , repaet);
         App.getApp().getDb().taskDao().insert(taskModel);
+
+        HashMap<String,TaskModel> task = new HashMap<>();
+        task.put("task info" , taskModel);
+        db.collection("task").add(task);
     }
 
 

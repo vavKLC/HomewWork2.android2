@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/signUpFragment">
+    app:startDestination="@+id/homeFragment">
 
     <fragment
         android:id="@+id/mainBoardFragment"
@@ -36,4 +36,9 @@
         android:name="com.example.homewwork2android2.ui.fragment.auth.FinishRegisterFragment"
         android:label="fragment_finish_register"
         tools:layout="@layout/fragment_finish_register" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homewwork2android2.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -23,6 +23,8 @@ import com.example.homewwork2android2.ui.fragment.createtask.adapter.HomeAdapter
 public class HomeFragment extends Fragment implements OnItemClickListener {
     private FragmentHomeBinding binding;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,6 +71,12 @@ public class HomeFragment extends Fragment implements OnItemClickListener {
             public void onClick(View view) {
                 CreateTaskFragment createTaskFragment = new CreateTaskFragment();
                 createTaskFragment.show(requireActivity().getSupportFragmentManager(), "");
+            }
+        });
+        binding.toolbarIconH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(requireView    ()).navigate(R.id.profileFragment);
             }
         });
     }

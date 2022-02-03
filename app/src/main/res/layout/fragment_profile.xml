@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.fragment.createtask.HomeFragment">
+    tools:context=".ui.fragment.ProfileFragment">
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:elevation="@dimen/normal_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -22,47 +23,61 @@
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/home_fragment_toolbar"
+                android:id="@+id/profile_fragment_toolbar"
                 android:background="@color/white_red"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:titleTextColor="@color/white"
-                app:title="Home" />
+                app:title="Profile" />
 
             <ImageView
-                android:id="@+id/toolbar_icon_h"
+                android:id="@+id/toolbar_icon_p"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:layout_marginEnd="30dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:src="@drawable/ic_person"
+                android:src="@drawable/ic_baseline_list_alt_24"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/home_fragment_toolbar"
+                app:layout_constraintEnd_toEndOf="@id/profile_fragment_toolbar"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <EditText
+        android:id="@+id/name_et"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:backgroundTint="@color/white_red"
-        android:contentDescription="@string/fab"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        android:hint="@string/name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
 
+    <EditText
+        android:id="@+id/surname_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="surname"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/apply_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red_gradient_background"
+        android:text="подтвердить" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/red_gradient_background"
+        android:text="Читать" />
 
 
 </LinearLayout>
