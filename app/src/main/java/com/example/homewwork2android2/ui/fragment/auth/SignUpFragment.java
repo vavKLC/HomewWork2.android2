@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 
 import com.example.homewwork2android2.R;
 import com.example.homewwork2android2.databinding.FragmentSignUpBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpFragment extends Fragment {
     private FragmentSignUpBinding binding;

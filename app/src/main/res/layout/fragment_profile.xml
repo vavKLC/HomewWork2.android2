@@ -51,32 +51,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/name"
-        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="6dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/solid"
+        android:textColor="@color/grey"
         android:textColorHint="@color/black"
+        android:layout_marginTop="48dp"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/surname_et"
+        android:gravity="center"
+        android:padding="9dp"
+        android:layout_marginTop="@dimen/normal_margin"
         android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_height="wrap_content"
         android:hint="surname"
-        android:textColor="@color/black"
+        android:background="@drawable/solid"
+        android:textColor="@color/grey"
         android:textColorHint="@color/black"
         android:textSize="20sp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/apply_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/red_gradient_background"
-        android:text="подтвердить" />
+        android:layout_marginTop="26dp"
+        style="@style/button_standart"
+        android:text="Подтвердить"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_read"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/red_gradient_background"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        style="@style/button_standart"
         android:text="Читать" />
 
 
