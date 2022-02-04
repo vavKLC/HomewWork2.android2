@@ -86,7 +86,7 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         String text = binding.etTask.getText().toString();
         TaskModel taskModel = new  TaskModel(text , date , repaet);
         App.getApp().getDb().taskDao().insert(taskModel);
-        db.collection("task").add(taskModel);
+        db.collection("taskinfo").add(taskModel);
         mDatabase.child("task").child(String.valueOf(taskModel.id)).setValue(taskModel);
     }
 
