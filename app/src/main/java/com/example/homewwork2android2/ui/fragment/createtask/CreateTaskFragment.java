@@ -18,16 +18,26 @@ import com.example.homewwork2android2.app.App;
 import com.example.homewwork2android2.R;
 import com.example.homewwork2android2.databinding.FragmentCreateTaskBinding;
 import com.example.homewwork2android2.model.TaskModel;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.auth.User;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class CreateTaskFragment extends BottomSheetDialogFragment implements DatePickerDialog.OnDateSetListener {
     private FragmentCreateTaskBinding binding;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private DatabaseReference mDatabase;
     private int startYear;
     private int startMonth;
     private int startDay;
@@ -45,6 +55,7 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initClicker();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
     private void initClicker() {
@@ -75,10 +86,8 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         String text = binding.etTask.getText().toString();
         TaskModel taskModel = new  TaskModel(text , date , repaet);
         App.getApp().getDb().taskDao().insert(taskModel);
-
-        HashMap<String,TaskModel> task = new HashMap<>();
-        task.put("task info" , taskModel);
-        db.collection("task").add(task);
+        db.collection("Users").document("taskinfo").set(taskModel);
+        mDatabase.child("task").child(String.valueOf(taskModel.id)).setValue(taskModel);
     }
 
 

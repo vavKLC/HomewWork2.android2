@@ -1,7 +1,4 @@
 package com.example.homewwork2android2.ui.fragment.auth;
-
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
